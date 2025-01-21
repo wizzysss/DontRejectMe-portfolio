@@ -1,6 +1,8 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import myImage from '../assets/ara.png';
 ---
 <title>DontRejectMe</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
     <h1>WIZZYS</h1>
     <h3>aka Aravindh Loganathan</h3>
   </div>
-  <div class="image"> <img src="/src/ara.png" alt="img not found"></div>
+  <div class="image"> <Image src={myImage} alt="img not found" class="my-class"/> </div>
  
 </Layout>
 
@@ -27,7 +29,7 @@ import Layout from '../layouts/Layout.astro';
 	left: 60%;
 	bottom: 20%;
   }
-  img{
+  Image.my-class{
 	background-image: radial-gradient(rgba(172, 255, 47, 0.182), rgba(25, 25, 25, 0.545), rgba(0, 0, 0, 0));
 	width: 30rem;
   }
